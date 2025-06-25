@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-language API Docs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    select {
+      padding: 8px;
+      margin-bottom: 20px;
+    }
+    pre {
+      background: #2d2d2d;
+      color: #fff;
+      padding: 20px;
+      overflow-x: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Multi-Language API Example</h1>
+  <label for="language-select">Choose Language:</label>
+  <select id="language-select">
+    <option value="json">JSON</option>
+    <option value="nodejs">Node.js</option>
+    <option value="python">Python</option>
+    <option value="php">PHP</option>
+    <option value="java">Java</option>
+    <option value="ruby">Ruby</option>
+  </select>
+
+  <h2>Request</h2>
+  <pre><code id="request-block" class="language-json"></code></pre>
+
+  <h2>Response</h2>
+  <pre><code id="response-block" class="language-json"></code></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <script>
+    const requestPayload = {
+      "Application ID": "103",
+      "Request User ID": "176",
+      "Data Origin": "KYC Onboarding DEV",
+      "Account Opening Jurisdiction": "AMEA",
+      "Business Domain": "GEN",
+      "SynchAPIFlag": "Y",
+      "Relationship Team Code": "INV",
+      "Prospect": [
+        {
+          "Applicant ID": "APP5",
+          "Primary Prospect Flag": "Y",
+          "Prospect Type": "ORG",
+          "First Name": "MAHRI",
+          "Middle Name": "Mohamed Ben",
+          "Last Name": "Ahmed",
+          "Name Suffix": "Jr",
+          "Title": "Mr",
+          "Alias": ["My laden Company"],
+          "Display Name": "My laden Company",
+          "Date Of Birth": "02/02/20",
+          "SSN/TIN": "123456",
+          "Age": 0,
+          "Gender": "M",
+          "Marital Status": "MA",
+          "Number Of Dependents": 5,
+          "Primary Citizenship": "USA",
+          "Secondary Citizenship": ["TO", "USA"],
+          "Citizenship Status": "C",
+          "Country Of Birth": "Spn",
+          "Country Of Residence": ["TO", "USA"],
+          "Customer Segment": ["CLB", "RLB"],
+          "Country Of Taxation": ["USA"],
+          "Country Of Incorporation": "TO",
+          "Source Of Wealth": ["KD", "MA"],
+          "Occupation": ["AGR"],
+          "Job Title": "CEO",
+          "Employment Type": "Official",
+          "Employment Status": "EMP",
+          "Employer Name": "Jeni Inc",
+          "Employer Industry": "Casino",
+          "Expected to Transact with High Risk Country": "Y",
+          "Is Linked to related party who is PEP": "Y",
+          "Is National of Sanctioned Country Flag": "Y",
+          "Region Company Is Licensed To Operate In": ["SEZ", "MLND"],
+          "Retirement Year": "",
+          "CIP Verified Status": "CIPV",
+          "CIP Exempt Flag": "N",
+          "CIP Verified Flag": "A",
+          "PEP Flag": ["Y"],
+          "Family PEP Flag": "Y",
+          "Existing Internal ID": "",
+          "Account Type": ["SA", "CH"],
+          "Type Of Account Opening": ["OFF", "ON"],
+          "Length Of Relationship": 50,
+          "Industry": ["INS", "OG", "APR"],
+          "Address": [
+            {
+              "Address Purpose Code": "B",
+              "Building Number": "123",
+              "Building Name": "ATLAS TOWER",
+              "Street": "JAMAL ABDUD NASIR RD.",
+              "Street Line 1": "JAMAL RD.",
+              "Street Line 2": "ABDUD RD.",
+              "Street Line 3": "NASIR RD.",
+              "Street Line 4": "JAMAL ABDUD RD.",
+              "Street Line 5": "ABDUD NASIR RD.",
+              "Street Line 6": "JAMAL NASIR RD.",
+              "Area": "North",
+              "City": "Bangalore",
+              "State": "Karnataka",
+              "Region": "Karnataka",
+              "Country": "BM",
+              "Postal Code": "560066"
+            }
+          ],
+          "Country": [
+            {
+              "Relationship Type": "C",
+              "Country": "AE"
+            }
+          ],
+          "Credit Rating": [
+            {
+              "Credit Rating": "AAA",
+              "Credit Rating Source": "MOODY",
+              "Credit Rating Score": 580
+            }
+          ],
+          "Email Address": [
+            {
+              "Email Purpose": "P",
+              "Email Sequence Number": 1,
+              "Email Address": "jamal@yahoo.co.in"
+            }
+          ],
+          "Financials": {
+            "Stated Total Liquid Net Worth Base": "1222",
+            "Income Currency": "USD",
+            "Stated Total Net Worth Base": "1222.098",
+            "Stated Total Annual Turnover": "1000000000000000000.23409876",
+            "Stated Annual Proportion of Cash Transaction": "0.78"
+          },
+          "Phone": [
+            {
+              "Phone Purpose": "B",
+              "Phone Sequence Number": 1,
+              "Country Code Of Phone Number": "001",
+              "Phone Number": "9878798-9877-9876",
+              "Phone Extension": "621"
+            }
+          ],
+          "Identification Document": [
+            {
+              "Document Purpose": "CID",
+              "Document Number": "12",
+              "Document Name": "1234",
+              "Machine Readable Zone 1": "P<UTOERIKSSON<<ANNA<MARIA<<<<<<<<<<<<<<<<<<<",
+              "Machine Readable Zone 2": "L898902C<3UTO6908061F9406236ZE184226B<<<<<14",
+              "Issuing District": "Phil",
+              "Issuing Province": "North",
+              "Issuing City": "California",
+              "Issuing State": "Kansas",
+              "Issuing County": "Texas",
+              "Issuing Country": "USA",
+              "Issuing Date": "01/01/2020",
+              "Expiry Date": "01/01/2099",
+              "Issuing Authority": "Passport Office"
+            }
+          ]
+        }
+      ]
+    };
+
+    const responseExample = `{
+  "Application ID": "ApplicationID-EMEA",
+  "Request ID": 208
+}`;
+
+    function jsonToCode(lang, payload) {
+      const url = 'https://<hostname>:<port>/kycob-prospect-service/prospect/v1/add';
+      const jsonStr = JSON.stringify(payload, null, 2);
+      switch (lang) {
+        case 'json':
+          return `POST ${url}\nContent-Type: application/json\n\n${jsonStr}`;
+        case 'nodejs':
+          return `const axios = require('axios');\naxios.post('${url}', ${jsonStr}, {\n  headers: { 'Content-Type': 'application/json' }\n});`;
+        case 'python':
+          return `import requests\nheaders = {'Content-Type': 'application/json'}\ndata = ${jsonStr}\nrequests.post('${url}', json=data, headers=headers)`;
+        case 'php':
+          return `<?php\n$url = '${url}';\n$data = ${JSON.stringify(payload, null, 2).replace(/"([^"]+)":/g, "'$1' =>")};\n$options = [\n  'http' => [\n    'header'  => "Content-Type: application/json\\r\\n",\n    'method'  => 'POST',\n    'content' => json_encode($data)\n  ]\n];\n$context  = stream_context_create($options);\n$result = file_get_contents($url, false, $context); ?>`;
+        case 'java':
+          return `HttpClient client = HttpClient.newHttpClient();\nHttpRequest request = HttpRequest.newBuilder()\n  .uri(URI.create("${url}"))\n  .header("Content-Type", "application/json")\n  .POST(HttpRequest.BodyPublishers.ofString(${JSON.stringify(jsonStr)}))\n  .build();\nclient.send(request, HttpResponse.BodyHandlers.ofString());`;
+        case 'ruby':
+          return `require 'net/http'\nrequire 'json'\nuri = URI('${url}')\nreq = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')\nreq.body = ${JSON.stringify(jsonStr)}\nres = Net::HTTP.start(uri.hostname, uri.port, use_ssl: true) { |http| http.request(req) }`;
+        default:
+          return jsonStr;
+      }
+    }
+
+    const languageSelect = document.getElementById('language-select');
+    const requestBlock = document.getElementById('request-block');
+    const responseBlock = document.getElementById('response-block');
+
+    function updateBlocks(lang) {
+      requestBlock.textContent = jsonToCode(lang, requestPayload);
+      requestBlock.className = `language-${lang === 'json' ? 'json' : 'javascript'}`;
+      hljs.highlightElement(requestBlock);
+
+      responseBlock.textContent = responseExample;
+      responseBlock.className = 'language-json';
+      hljs.highlightElement(responseBlock);
+    }
+
+    languageSelect.addEventListener('change', e => {
+      updateBlocks(e.target.value);
+    });
+
+    updateBlocks('json');
+  </script>
+</body>
+</html>
