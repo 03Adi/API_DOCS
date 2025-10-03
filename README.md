@@ -8,7 +8,7 @@ This project provides a lightweight, interactive HTML-based interface to view AP
 🌈 Syntax highlighting with highlight.js
 🖱️ Language dropdown to switch between JSON, Node.js, Python, PHP, Java, Ruby
 📜 Includes a sample static API response block
-
+ 
 ## 📸 Preview
  
 ## 📁 File Structure
